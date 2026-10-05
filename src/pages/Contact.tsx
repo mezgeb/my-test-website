@@ -1,28 +1,59 @@
 import { useState, type FormEvent } from 'react'
 
+const ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
+
+type Status = 'idle' | 'sending' | 'success' | 'error'
+
 export default function Contact() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState<Status>('idle')
+  const [errorMsg, setErrorMsg] = useState('')
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    // For now just log — swap for a real form service later (Formspree, Netlify Forms, etc.)
-    console.log({ name, email, message })
-    setSubmitted(true)
-    setName('')
-    setEmail('')
-    setMessage('')
+    setStatus('sending')
+    setErrorMsg('')
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: ACCESS_KEY,
+          name,
+          email,
+          message,
+          subject: `New contact from ${name}`,
+          from_name: 'my-test-website',
+        }),
+      })
+      const data = await res.json()
+      if (!data.success) throw new Error(data.message || 'Submission failed')
+
+      setStatus('success')
+      setName('')
+      setEmail('')
+      setMessage('')
+    } catch (err) {
+      setStatus('error')
+      setErrorMsg(err instanceof Error ? err.message : 'Something went wrong')
+    }
   }
 
   return (
     <section className="space-y-6 max-w-xl">
       <h1 className="text-3xl font-bold tracking-tight">Contact</h1>
 
-      {submitted && (
+      {status === 'success' && (
         <div className="bg-green-50 border border-green-200 text-green-800 rounded-md px-4 py-3 text-sm">
-          Thanks — your message was captured (check the browser console for now).
+          Thanks — your message was sent.
+        </div>
+      )}
+      {status === 'error' && (
+        <div className="bg-red-50 border border-red-200 text-red-800 rounded-md px-4 py-3 text-sm">
+          {errorMsg}
         </div>
       )}
 
@@ -67,9 +98,10 @@ export default function Contact() {
         </div>
         <button
           type="submit"
-          className="inline-flex items-center px-4 py-2 bg-slate-900 text-white rounded-md hover:bg-slate-700 transition-colors"
+          disabled={status === 'sending'}
+          className="inline-flex items-center px-4 py-2 bg-slate-900 text-white rounded-md hover:bg-slate-700 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
         >
-          Send message
+          {status === 'sending' ? 'Sending…' : 'Send message'}
         </button>
       </form>
     </section>
