@@ -14,7 +14,7 @@ export default function MainLayout() {
       <header className="bg-white border-b border-slate-200">
         <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
           <NavLink to="/" className="text-xl font-semibold tracking-tight">
-            React Sandbox
+            Full of life adult home care
           </NavLink>
           <nav className="flex gap-6 text-sm">
             {navItems.map(({ to, label, end }) => (

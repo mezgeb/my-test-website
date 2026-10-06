@@ -44,10 +44,10 @@ export default function Home() {
   return (
     <div className="space-y-12">
       <section className="space-y-6">
-        <h1 className="text-4xl font-bold tracking-tight">Welcome</h1>
+        <h1 className="text-4xl font-bold tracking-tight">Full of Life Adult home care</h1>
         <p className="text-lg text-slate-600 max-w-2xl">
-          This is a small React site to brush up on routing, components, and
-          Tailwind. Use the nav above to move between pages.
+          Exceptional Senior Care
+          Comfort, dignity, and expert care for your loved ones.
         </p>
         <div className="flex gap-3">
           <Link
