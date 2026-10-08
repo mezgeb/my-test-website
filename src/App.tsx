@@ -6,6 +6,7 @@ import Contact from './pages/Contact'
 import Home from './pages/Home'
 import Services from './pages/Services'
 import Testimonials from './pages/Testimonials'
+import ThePlace from './pages/ThePlace'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="about" element={<About />} />
         <Route path="services" element={<Services />} />
         <Route path="testimonials" element={<Testimonials />} />
+        <Route path="the-place" element={<ThePlace />} />
         <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Route>

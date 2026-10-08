@@ -33,10 +33,18 @@ const strips: Strip[] = [
   },
   {
     title: 'The place',
-    to: '/about',
-    photos: Array.from({ length: 6 }, (_, i) =>
-      `https://picsum.photos/seed/place${i + 1}/600/400`,
-    ),
+    to: '/the-place',
+    photos: [
+      '/images/house1.png',
+      '/images/commonroom.png',
+      '/images/house-kitchen.png',
+      '/images/Room1.png',
+      '/images/Room2.png',
+      '/images/Bathroom.png',
+      '/images/backyard.png',
+      '/images/backyard2.png',
+      '/images/backyard3.png',
+    ],
   },
 ]
 
