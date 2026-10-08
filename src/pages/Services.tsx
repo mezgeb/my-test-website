@@ -25,11 +25,6 @@ const services = [
       'A clean room, fresh linens, and tidy common spaces — because home should feel like home.',
   },
   {
-    title: 'Transportation to appointments',
-    description:
-      'We coordinate and accompany residents to doctor visits, specialists, and other scheduled care.',
-  },
-  {
     title: 'Companionship & activities',
     description:
       'Daily conversation, shared meals, and gentle activities to keep residents engaged, connected, and smiling.',
