@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 
 import MainLayout from './layouts/MainLayout'
 import About from './pages/About'
+import Celebrations from './pages/Celebrations'
 import Contact from './pages/Contact'
 import Home from './pages/Home'
 import Services from './pages/Services'
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="services" element={<Services />} />
         <Route path="testimonials" element={<Testimonials />} />
         <Route path="the-place" element={<ThePlace />} />
+        <Route path="celebrations" element={<Celebrations />} />
         <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Route>

@@ -4,33 +4,26 @@ const cards = [
   {
     to: '/services',
     title: 'Our services',
-    description: 'See what we can help you with — end-to-end.',
-    image: 'https://picsum.photos/seed/services/600/400',
+    description: '24-hour care, home-cooked meals, and the comforts of a real home.',
+    image: '/images/house-kitchen.png',
   },
   {
     to: '/about',
     title: 'About us',
-    description: 'A little about who we are and what we care about.',
-    image: 'https://picsum.photos/seed/about/600/400',
+    description: 'A small, home-like residence where every resident is known by name.',
+    image: '/images/house1.png',
   },
   {
     to: '/testimonials',
-    title: 'What people say',
-    description: 'Hear it from clients who have worked with us.',
-    image: 'https://picsum.photos/seed/testimonials/600/400',
+    title: 'What families say',
+    description: 'Hear from the families who trust us with their loved ones.',
+    image: '/images/commonroom.png',
   },
 ]
 
 type Strip = { title: string; to: string; photos: string[] }
 
 const strips: Strip[] = [
-  {
-    title: 'Food',
-    to: '/services',
-    photos: Array.from({ length: 6 }, (_, i) =>
-      `https://picsum.photos/seed/food${i + 1}/600/400`,
-    ),
-  },
   {
     title: 'The place',
     to: '/the-place',
@@ -46,16 +39,30 @@ const strips: Strip[] = [
       '/images/backyard3.png',
     ],
   },
+  {
+    title: 'Celebrations',
+    to: '/celebrations',
+    photos: [
+      '/images/celebration1.png',
+      '/images/celebration2.jpg',
+      '/images/celebration3.jpg',
+      '/images/celebration4.jpg',
+      '/images/celebration5.jpg',
+      '/images/celebration6.jpg',
+      '/images/celebration7.jpg',
+      '/images/celebration8.jpg',
+    ],
+  },
 ]
 
 export default function Home() {
   return (
     <div className="space-y-12">
       <section className="space-y-6">
-        <h1 className="text-4xl font-bold tracking-tight">Full of Life Adult home care</h1>
+        <h1 className="text-4xl font-bold tracking-tight">Full of Life Adult Home Care</h1>
         <p className="text-lg text-slate-600 max-w-2xl">
-          Exceptional Senior Care
-          Comfort, dignity, and expert care for your loved ones.
+          Exceptional senior care — comfort, dignity, and attentive support for
+          your loved ones, in a real home.
         </p>
         <div className="flex gap-3">
           <Link
