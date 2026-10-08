@@ -17,7 +17,9 @@ const testimonials = [
 ]
 
 export default function Testimonials() {
-  return (
+  return (<div className="text-2xl"> Coming soon ...</div>)
+
+  /*return (
     <section className="space-y-8">
       <div className="space-y-3">
         <h1 className="text-3xl font-bold tracking-tight">What families say</h1>
@@ -42,5 +44,5 @@ export default function Testimonials() {
         ))}
       </ul>
     </section>
-  )
+  )*/
 }

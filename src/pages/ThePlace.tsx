@@ -1,7 +1,8 @@
 type Photo = { src: string; caption: string }
 
 const photos: Photo[] = [
-  { src: '/images/house1.png', caption: 'The house' },
+  { src: '/images/house.png', caption: 'Our home' },
+  { src: '/images/house2.png', caption: 'Our home' },
   { src: '/images/commonroom.png', caption: 'Common room' },
   { src: '/images/house-kitchen.png', caption: 'Kitchen' },
   { src: '/images/Room1.png', caption: 'Room 1' },
@@ -16,7 +17,7 @@ export default function ThePlace() {
   return (
     <section className="space-y-8">
       <div className="space-y-2">
-        <h1 className="text-3xl font-bold tracking-tight">The place</h1>
+        <h1 className="text-3xl font-bold tracking-tight">Our Home</h1>
         <p className="text-slate-600 max-w-2xl">
           A look around our home — the common areas, bedrooms, and backyard
           where our residents spend their days.

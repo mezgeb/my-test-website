@@ -2,11 +2,16 @@ export default function About() {
   return (
     <section className="space-y-10">
       <div className="space-y-4">
-        <h1 className="text-3xl font-bold tracking-tight">About us</h1>
+        <h1 className="text-3xl font-bold tracking-tight">About Our Home</h1>
         <p className="text-lg text-slate-600 max-w-2xl">
-          Full of Life Adult Home Care is a small, home-like residence where
-          seniors live with the dignity, comfort, and attentive care they
-          deserve.
+          Full of Life Adult Home Care is a small, home-like residence where seniors live with the dignity, comfort, and attentive care they deserve.
+        </p>
+        <p className="text-lg text-slate-600 max-w-2xl">
+          Our home is a thoughtfully designed, custom-built adult care home in a beautiful Northeast Portland neighborhood. It offers five comfortable resident rooms, each with its own attached half-bath, providing residents with added privacy and convenience. A separate half-bath in the hallway is available for family members and visitors.
+          The residence features spacious common areas and a welcoming living space where residents can relax, spend time together, and enjoy daily activities in a warm and comfortable setting. Spacious decks also provide a peaceful place to enjoy fresh air, sunshine, and time outdoors.
+        </p>
+        <p className="text-lg text-slate-600 max-w-2xl">
+          We warmly welcome families to visit and spend time with their loved ones. We believe that staying connected with family is an important part of creating a happy, supportive, and home-like environment for our residents.
         </p>
       </div>
 
@@ -14,7 +19,7 @@ export default function About() {
         <h2 className="text-xl font-semibold text-slate-900">Our story</h2>
         <p>
           We opened our doors to offer families a different kind of option — a
-          real home, not an institution. Our caregivers aren&apos;t rotating
+          real home, not an institution. Our caregivers are not rotating
           through shifts across a floor of strangers; they care for a small
           group of residents, every day, and get to know each one by name,
           by story, and by preference.

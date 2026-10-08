@@ -9,9 +9,9 @@ const cards = [
   },
   {
     to: '/about',
-    title: 'About us',
+    title: 'About Our Home',
     description: 'A small, home-like residence where every resident is known by name.',
-    image: '/images/house1.png',
+    image: '/images/house.png',
   },
   {
     to: '/testimonials',
@@ -25,17 +25,17 @@ type Strip = { title: string; to: string; photos: string[] }
 
 const strips: Strip[] = [
   {
-    title: 'The place',
+    title: 'Our Home',
     to: '/the-place',
     photos: [
-      '/images/house1.png',
+      '/images/house.png',
+      '/images/house2.png',
       '/images/commonroom.png',
       '/images/house-kitchen.png',
       '/images/Room1.png',
       '/images/Room2.png',
       '/images/Bathroom.png',
       '/images/backyard.png',
-      '/images/backyard2.png',
       '/images/backyard3.png',
     ],
   },
@@ -61,8 +61,8 @@ export default function Home() {
       <section className="space-y-6">
         <h1 className="text-4xl font-bold tracking-tight">Full of Life Adult Home Care</h1>
         <p className="text-lg text-slate-600 max-w-2xl">
-          Exceptional senior care — comfort, dignity, and attentive support for
-          your loved ones, in a real home.
+          Exceptional Care. A True Home.
+          Compassionate senior care in a beautiful, custom-built adult care home designed around comfort, dignity, and the well-being of your loved ones.
         </p>
         <div className="flex gap-3">
           <Link

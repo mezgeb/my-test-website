@@ -93,9 +93,54 @@ export default function MainLayout() {
             </main>
 
             <footer className="bg-white border-t border-slate-200">
-                <div className="max-w-5xl mx-auto px-6 py-6 text-sm text-slate-500 flex items-center justify-between">
-                    <span>&copy; {new Date().getFullYear()} React Sandbox</span>
-                    <span>Built with Vite + React + Tailwind</span>
+                <div className="max-w-5xl mx-auto px-6 py-8">
+                    <div className="grid gap-6 sm:grid-cols-3 text-sm text-slate-500">
+                        {/* Address */}
+                        <div>
+                            <h3 className="font-medium text-slate-900 mb-2">Our Location</h3>
+                            <p>
+                                4453 NE Failing St.
+                                <br />
+                                Portland, OR 87213
+                            </p>
+                        </div>
+
+                        {/* Phone */}
+                        <div>
+                            <h3 className="font-medium text-slate-900 mb-2">Contact Us</h3>
+                            <p>
+                                <a
+                                    href="tel:6062649111"
+                                    className="hover:text-slate-900 transition-colors"
+                                >
+                                    (606) 264-9111
+                                </a>
+                            </p>
+                            <p>
+                                <a
+                                    href="mailto:folahc2022@gmail.com"
+                                    className="hover:text-slate-900 transition-colors"
+                                >
+                                    folahc2022@gmail.com
+                                </a>
+                            </p>
+                        </div>
+
+                        {/* Hours / Family */}
+                        <div>
+                            <h3 className="font-medium text-slate-900 mb-2">
+                                Full of Life Adult Home Care
+                            </h3>
+                            <p>
+                                A warm, comfortable home where seniors receive attentive,
+                                compassionate care.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="mt-8 pt-6 border-t border-slate-200 text-sm text-slate-500">
+                        <span>&copy; {new Date().getFullYear()} Full of Life Adult Home Care</span>
+                    </div>
                 </div>
             </footer>
         </div>
