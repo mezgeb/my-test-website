@@ -13,8 +13,9 @@ export default function MainLayout() {
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900">
       <header className="bg-white border-b border-slate-200">
         <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-          <NavLink to="/" className="text-xl font-semibold tracking-tight">
-            Full of life adult home care
+          <NavLink to="/" className="flex items-center gap-2 text-xl font-semibold tracking-tight">
+            <img src="/favicon.svg" alt="" className="h-7 w-7" />
+            <span>Full of Life Adult Home Care</span>
           </NavLink>
           <nav className="flex gap-6 text-sm">
             {navItems.map(({ to, label, end }) => (
