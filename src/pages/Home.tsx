@@ -89,7 +89,7 @@ export default function Home() {
               to={card.to}
               className="group block overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="aspect-[3/2] overflow-hidden bg-slate-100">
+              <div className="aspect-3/2 overflow-hidden bg-slate-100">
                 <img
                   src={card.image}
                   alt=""
@@ -139,7 +139,7 @@ export default function Home() {
                 key={i}
                 className="flex-none w-72 sm:w-80 snap-start overflow-hidden rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="aspect-[3/2] overflow-hidden bg-slate-100">
+                <div className="aspect-3/2 overflow-hidden bg-slate-100">
                   <img
                     src={src}
                     alt=""

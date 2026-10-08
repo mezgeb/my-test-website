@@ -101,7 +101,7 @@ export default function MainLayout() {
                             <p>
                                 4453 NE Failing St.
                                 <br />
-                                Portland, OR 87213
+                                Portland, OR 97213
                             </p>
                         </div>
 

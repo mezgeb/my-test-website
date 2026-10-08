@@ -30,7 +30,7 @@ export default function ThePlace() {
             key={i}
             className="overflow-hidden rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow"
           >
-            <div className="aspect-[3/2] overflow-hidden bg-slate-100">
+            <div className="aspect-3/2 overflow-hidden bg-slate-100">
               <img
                 src={src}
                 alt={caption}
