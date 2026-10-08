@@ -56,6 +56,31 @@ export default function About() {
           </li>
         </ul>
       </div>
+
+      <div className="space-y-4 max-w-2xl border-t border-slate-200 pt-8">
+        <h2 className="text-xl font-semibold text-slate-900">
+          Our Location
+        </h2>
+
+        <p className="text-slate-700 leading-relaxed">
+          Full of Life Adult Home Care is located at 4453 NE Failing St, Portland, OR 97213.
+        </p>
+
+        <p className="text-slate-700 leading-relaxed">
+          Conveniently located in Northeast Portland, our home offers families
+          looking for senior care in Portland a warm residential alternative to
+          larger assisted living communities.
+        </p>
+
+        <a
+            href="https://www.google.com/maps/search/?api=1&query=4453+NE+Failing+St%2C+Portland%2C+OR+97213"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex font-medium text-slate-900 underline underline-offset-4 hover:text-slate-600"
+        >
+          View our location on Google Maps
+        </a>
+      </div>
     </section>
   )
 }

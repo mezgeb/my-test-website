@@ -2,20 +2,20 @@ import { Link } from 'react-router-dom'
 
 const cards = [
   {
-    to: '/services',
-    title: 'Our services',
-    description: '24-hour care, home-cooked meals, and the comforts of a real home.',
-    image: '/images/house-kitchen.png',
-  },
-  {
     to: '/about',
     title: 'About Our Home',
     description: 'A small, home-like residence where every resident is known by name.',
     image: '/images/house.png',
   },
   {
+    to: '/services',
+    title: 'Our services',
+    description: '24-hour care, home-cooked meals, and the comforts of a real home.',
+    image: '/images/house-kitchen.png',
+  },
+  {
     to: '/testimonials',
-    title: 'What families say',
+    title: 'Testimonials',
     description: 'Hear from the families who trust us with their loved ones.',
     image: '/images/commonroom.png',
   },
@@ -40,7 +40,7 @@ const strips: Strip[] = [
     ],
   },
   {
-    title: 'Celebrations',
+    title: 'Photo Gallery',
     to: '/celebrations',
     photos: [
       '/images/celebration1.png',
@@ -51,6 +51,12 @@ const strips: Strip[] = [
       '/images/celebration6.jpg',
       '/images/celebration7.jpg',
       '/images/celebration8.jpg',
+      '/images/meals.png',
+      '/images/Christmas1.png',
+      '/images/liveMusic1.png',
+      '/images/thanksgiving1.png',
+      '/images/thanksgiving2.png',
+      '/images/eatingtogether.png',
     ],
   },
 ]
@@ -59,10 +65,18 @@ export default function Home() {
   return (
     <div className="space-y-12">
       <section className="space-y-6">
-        <h1 className="text-4xl font-bold tracking-tight">Full of Life Adult Home Care</h1>
-        <p className="text-lg text-slate-600 max-w-2xl">
+        <h1 className="text-4xl font-bold tracking-tight">
+          Full of Life Adult Home Care
+        </h1>
+
+        <p className="text-xl font-medium text-slate-900">
           Exceptional Care. A True Home.
-          Compassionate senior care in a beautiful, custom-built adult care home designed around comfort, dignity, and the well-being of your loved ones.
+        </p>
+
+        <p className="text-lg text-slate-600 max-w-2xl">
+          Compassionate senior care in a beautiful, custom-built adult care home
+          in Portland, Oregon, designed around comfort, dignity, and the
+          well-being of your loved ones.
         </p>
         <div className="flex gap-3">
           <Link
@@ -152,6 +166,38 @@ export default function Home() {
           </div>
         </section>
       ))}
+      
+      <section className="space-y-4 border-t border-slate-200 pt-8">
+        <h2 className="text-2xl font-semibold tracking-tight">
+          Located in Northeast Portland
+        </h2>
+
+        <p className="text-slate-600 max-w-2xl">
+          Full of Life Adult Home Care is located at 4453 NE Failing St,
+          Portland, OR 97213, in Northeast Portland.
+        </p>
+
+        <a
+            href="https://www.google.com/maps/search/?api=1&query=4453+NE+Failing+St%2C+Portland%2C+OR+97213"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center font-medium text-slate-900 hover:text-slate-600"
+        >
+          View our location on Google Maps
+          <svg
+              className="ml-1 h-4 w-4"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden
+          >
+            <path
+                fillRule="evenodd"
+                d="M7.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414-1.414L11.586 10 7.293 5.707a1 1 0 010-1.414z"
+                clipRule="evenodd"
+            />
+          </svg>
+        </a>
+      </section>
     </div>
   )
 }

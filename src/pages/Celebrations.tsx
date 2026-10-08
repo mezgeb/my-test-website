@@ -7,6 +7,12 @@ const photos = [
   '/images/celebration6.jpg',
   '/images/celebration7.jpg',
   '/images/celebration8.jpg',
+    '/images/meals.png',
+    '/images/Christmas1.png',
+    '/images/liveMusic1.png',
+    '/images/thanksgiving1.png',
+    '/images/thanksgiving2.png',
+    '/images/eatingtogether.png',
 ]
 
 export default function Celebrations() {
